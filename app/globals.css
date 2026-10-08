@@ -1,0 +1,287 @@
+:root {
+  --background: #f5f6f8;
+  --surface: #ffffff;
+  --text: #17181b;
+  --muted: #6e7280;
+  --accent: #6c3ce7;
+  --accent-dark: #4f28bd;
+  --border: #e4e4ea;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 5vw;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.brand {
+  font-size: 1.15rem;
+  font-weight: 800;
+}
+
+.header nav {
+  display: flex;
+  gap: 24px;
+  color: var(--muted);
+}
+
+.header nav a:hover {
+  color: var(--accent);
+}
+
+.container {
+  width: min(1120px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 48px 0 72px;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  margin-bottom: 48px;
+}
+
+.hero h1,
+.checklist-title h1,
+.relatorios-page h1 {
+  margin: 8px 0;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.05;
+}
+
+.hero p,
+.checklist-title p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.eyebrow {
+  color: var(--accent) !important;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.total-card {
+  min-width: 190px;
+  padding: 24px;
+  color: white;
+  background: var(--accent);
+  border-radius: 18px;
+  text-align: center;
+}
+
+.total-card strong,
+.total-card span {
+  display: block;
+}
+
+.total-card strong {
+  font-size: 2.4rem;
+}
+
+.total-card span {
+  margin-top: 4px;
+  font-size: 0.85rem;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.section-heading span {
+  color: var(--muted);
+}
+
+.grid-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.card-veiculo {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 18px;
+  padding: 28px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(30, 24, 54, 0.05);
+}
+
+.card-veiculo h2 {
+  margin: 5px 0;
+}
+
+.card-veiculo p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.carro-roxo {
+  color: var(--accent) !important;
+  font-weight: 700;
+}
+
+.progresso {
+  text-align: right;
+}
+
+.progresso strong,
+.progresso span {
+  display: block;
+}
+
+.progresso strong {
+  font-size: 1.5rem;
+}
+
+.card-veiculo > a {
+  grid-column: 1 / -1;
+  padding-top: 14px;
+  color: var(--accent-dark);
+  font-weight: 700;
+  border-top: 1px solid var(--border);
+}
+
+.checklist-page {
+  max-width: 820px;
+}
+
+.back-button {
+  margin-bottom: 28px;
+  padding: 8px 12px;
+  color: var(--accent-dark);
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.checklist-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.total-card.compact {
+  min-width: 170px;
+  padding: 18px;
+}
+
+.items-list {
+  display: grid;
+  gap: 14px;
+}
+
+.item-checklist {
+  display: flex;
+  gap: 14px;
+  padding: 22px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  cursor: pointer;
+}
+
+.item-checklist input {
+  width: 20px;
+  height: 20px;
+  margin: 2px 0 0;
+  accent-color: var(--accent);
+}
+
+.item-checklist span {
+  display: grid;
+  gap: 6px;
+}
+
+.item-checklist small {
+  color: var(--muted);
+}
+
+.item-checklist.concluido {
+  opacity: 0.65;
+}
+
+.item-checklist.concluido strong {
+  text-decoration: line-through;
+}
+
+.relatorio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 32px;
+}
+
+.relatorio-card {
+  padding: 28px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+}
+
+.relatorio-card span,
+.relatorio-card strong {
+  display: block;
+}
+
+.relatorio-card span {
+  color: var(--muted);
+}
+
+.relatorio-card strong {
+  margin-top: 12px;
+  color: var(--accent);
+  font-size: 2rem;
+}
+
+@media (max-width: 700px) {
+  .hero,
+  .checklist-title {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .grid-cards,
+  .relatorio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .total-card {
+    width: 100%;
+  }
+}
